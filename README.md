@@ -50,4 +50,4 @@ pip install -r requirements.txt
 - Do not interact with the web page
 
 ## Known-issues
-- For some reason, script is not fetching lists starred repo belongs to.
+- For some reason, rarely script is not able to fetch lists some specific repo belongs to.
