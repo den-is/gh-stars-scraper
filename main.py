@@ -15,7 +15,7 @@ load_dotenv()
 
 try:
     GH_USERNAME = os.environ["GH_USERNAME"]
-    GH_LOGIN_PASSWORD = os.environ["GH_LOGIN_PASSWORD"]
+    GH_PASSWORD = os.environ["GH_PASSWORD"]
     GH_LOGIN_WAIT = int(os.getenv("GH_LOGIN_WAIT", 60))
 
     GH_LOGIN_URL = os.getenv("GH_LOGIN_URL", "https://github.com/login")
@@ -92,7 +92,7 @@ def main():
     insert_username.send_keys(GH_USERNAME)
 
     insert_password = driver.find_element(By.NAME, "password")
-    insert_password.send_keys(GH_LOGIN_PASSWORD)
+    insert_password.send_keys(GH_PASSWORD)
 
     sign_in = driver.find_element(By.NAME, "commit")
     sign_in.click()
