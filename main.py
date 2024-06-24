@@ -1,5 +1,6 @@
 import json
 import os
+import sys
 import time
 from pathlib import Path
 
@@ -15,17 +16,18 @@ load_dotenv()
 try:
     GH_USERNAME = os.environ["GH_USERNAME"]
     GH_LOGIN_PASSWORD = os.environ["GH_LOGIN_PASSWORD"]
+    GH_LOGIN_WAIT = int(os.getenv("GH_LOGIN_WAIT", 60))
 
     GH_LOGIN_URL = os.getenv("GH_LOGIN_URL", "https://github.com/login")
     GH_STARS_URL = f"https://github.com/{GH_USERNAME}?tab=stars"
 
     CHROME_DRIVER_PATH_ENV = os.environ["CHROME_DRIVER_PATH"]
     CHROME_DRIVER_PATH = Path(CHROME_DRIVER_PATH_ENV).expanduser().resolve()
-    GH_LOGIN_WAIT = int(os.getenv("GH_LOGIN_WAIT", 60))
+
     OUTPUT_FILE = os.getenv("OUTPUT_FILE", "output.json")
 except KeyError as e:
     print(f"Missing environment variable: {e}")
-    exit(1)
+    sys.exit(1)
 
 OUTPUT_DICT = {}
 
