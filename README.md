@@ -2,6 +2,8 @@
 
 Web-scraper for your own GitHub Stars for further analysis or to recall long-time ago forgotten repos.
 
+For now, script just outputs a JSON file `output.json` with results of scraping, in the same directory with the script.
+
 The script is extremely plain and primitive, and utilizes [Selenium](https://www.selenium.dev/) web-browser automation library.
 
 Contributions are welcome.
