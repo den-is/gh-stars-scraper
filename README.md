@@ -1,10 +1,8 @@
 # GitHub Stars scraper
 
-Primitive web-scraper for your own GitHub Stars for further analysis or to recall long-time agi forgotten repos.
+Web-scraper for your own GitHub Stars for further analysis or to recall long-time ago forgotten repos.
 
-This script is extremly plain and primitive.
-
-Script utilizes [selenium](https://www.selenium.dev/) web automation library.
+The script is extremely plain and primitive, and utilizes [Selenium](https://www.selenium.dev/) web-browser automation library.
 
 Contributions are welcome.
 
@@ -14,10 +12,10 @@ Contributions are welcome.
 - python 3.9+
 
 ## Installation
-Instructions shown for Unix based Operating Systems (specifically MacOS)
+Instructions shown are for Unix based Operating Systems (specifically MacOS)
 
 Download stable [chromedriver](https://googlechromelabs.github.io/chrome-for-testing/).
-Better if version matches to version of your Chrome Browser.
+Better if version matches to version of the currently installed Chrome Browser.
 
 ```sh
 cd ~/Downloads
@@ -42,7 +40,7 @@ pip install -r requirements.txt
 ```
 
 ## Running scraper
-- Create `.env` file with correct values from provided `.env.example`.
+- Create `.env` file with correct values, from provided `.env.example`.
 - Run script `python3 main.py`
 - Wait script to open browser window and open login page
 - Provide OTP code (I hope you have protected your github account with 2FA authentication)
