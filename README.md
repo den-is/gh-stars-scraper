@@ -51,3 +51,4 @@ pip install -r requirements.txt
 
 ## Known-issues
 - For some reason, rarely script is not able to fetch lists some specific repo belongs to.
+- Web pages evolve. New features and versions are constantly released. That means that scraper's logic might and will degrade over time, and will require maintenance.
